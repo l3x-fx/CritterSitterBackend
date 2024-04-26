@@ -19,7 +19,9 @@ public class PetMapper {
         PetDTO petDTO = new PetDTO();
         BeanUtils.copyProperties(pet, petDTO);
         petDTO.setOwnerId(pet.getCustomer().getId());
-        petDTO.setBirthDate(convertToLocalDate(pet.getBirthDate()));
+        if (pet.getBirthDate() != null) {
+            petDTO.setBirthDate(convertToLocalDate(pet.getBirthDate()));
+        }
         return petDTO;
     }
     public List<PetDTO> convertPetListToPetDTOList(List<Pet> petList){
@@ -33,7 +35,9 @@ public class PetMapper {
         Customer customer = new Customer();
         customer.setId(petDTO.getOwnerId());
         pet.setCustomer(customer);
-        pet.setBirthDate(convertToDate(petDTO.getBirthDate()));
+        if (petDTO.getBirthDate() != null){
+            pet.setBirthDate(convertToDate(petDTO.getBirthDate()));
+        }
         return pet;
     }
 
