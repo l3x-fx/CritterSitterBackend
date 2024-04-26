@@ -39,9 +39,14 @@ public class EmployeeService {
 
     public List<Employee> findEmployeesForService(EmployeeRequestDTO request) {
         DayOfWeek date = request.getDate().getDayOfWeek();
+        System.out.println("Date retrieved: " + date);
         Set<EmployeeSkill> skills = request.getSkills();
+        System.out.println("Skills retrieved: " + skills);
+
         List<Employee> availableEmp = employeeRepository.findByDaysAvailable(date);
+        System.out.println("Available employees found: " + availableEmp.size());
         return availableEmp.stream().filter(employee -> employee.getSkills().containsAll(skills)).collect(Collectors.toList());
+
 
     }
 

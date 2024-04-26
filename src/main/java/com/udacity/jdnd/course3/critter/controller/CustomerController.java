@@ -29,7 +29,7 @@ public class CustomerController {
 
     @PostMapping
     public CustomerDTO saveCustomer(@RequestBody CustomerDTO customerDTO){
-        Customer customer = customerMapper.convertCustomerDTOToCustomer(customerDTO);
+         Customer customer = customerMapper.convertCustomerDTOToCustomer(customerDTO);
         Customer response = customerService.saveCustomer(customer);
         return customerMapper.convertCustomerToCustomerDTO(response);
     }

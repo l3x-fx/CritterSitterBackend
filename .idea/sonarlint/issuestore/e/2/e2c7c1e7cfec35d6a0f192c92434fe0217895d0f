@@ -1,14 +1,14 @@
 
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8êÞ„Šñ1J$d7890d24-7114-4b9f-b274-0092c0bfd424
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8êÞ„Šñ1J$f684dc0f-feb1-4a12-a0c5-1703501d5023
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8êÞ„Šñ1J$cb89d801-e050-4991-a004-2ff700db9bcc
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8êÞ„Šñ1J$4033bfe4-fa9f-44a0-aaa8-1a8af969a089
 •
-java:S1128"SRemove this unused import 'com.udacity.jdnd.course3.critter.mapper.CustomerMapper'.(ž¨¤B8Ü¹³ ñ1J$a695388b-1610-47a6-bdf8-6201fe8c9c1e
+java:S1128"SRemove this unused import 'com.udacity.jdnd.course3.critter.mapper.CustomerMapper'.(ž¨¤B8Ü¹³ ñ1J$6709fee8-8a6a-4a6e-8a45-ab1ba9fb952c
 ˜
-java:S1128"URemove this unused import 'com.udacity.jdnd.course3.critter.service.CustomerService'.(ƒÓ¿Ç8Ý¹³ ñ1J$6e085160-ce70-46cc-b52e-a37dc510df5e
+java:S1128"URemove this unused import 'com.udacity.jdnd.course3.critter.service.CustomerService'.(ƒÓ¿Ç8Ý¹³ ñ1J$85b16e94-c99f-43a0-ac9a-68276073bc5f
 {
 java:S1128
-"8Remove this unused import 'javassist.NotFoundException'.(Šæ¶™8Ý¹³ ñ1J$c7389a44-a192-4129-96ee-f3f2056871d0
+"8Remove this unused import 'javassist.NotFoundException'.(Šæ¶™8Ý¹³ ñ1J$139dc12d-f2a3-4533-81f1-aa9ce79fb7cc
 w
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëÝüÿÿÿÿ8Ý¹³ ñ1J$2174f2a2-6822-4fd7-86b4-41f446a9bacb
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëÝüÿÿÿÿ8Ý¹³ ñ1J$199ef5e7-1a64-4cf1-826a-bd972e9af936

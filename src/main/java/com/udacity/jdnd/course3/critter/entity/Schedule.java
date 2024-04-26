@@ -25,6 +25,7 @@ public class Schedule {
     @ElementCollection
     @CollectionTable(name = "schedule_activities", joinColumns = @JoinColumn(name = "schedule_id"))
     @Column(name = "activities")
+    @Enumerated(EnumType.STRING)
     private Set<EmployeeSkill> activities;
 
     @ManyToMany
