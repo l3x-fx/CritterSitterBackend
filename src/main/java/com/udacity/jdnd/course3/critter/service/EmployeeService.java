@@ -7,7 +7,9 @@ import com.udacity.jdnd.course3.critter.enums.EmployeeSkill;
 import com.udacity.jdnd.course3.critter.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.DayOfWeek;
 import java.util.List;
@@ -16,10 +18,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
-@Slf4j
+@Transactional
 public class EmployeeService {
-    private final EmployeeRepository employeeRepository;
+    @Autowired
+    private EmployeeRepository employeeRepository;
 
     public Optional<Employee> getEmployeeById(Long id) {
         return employeeRepository.findById(id);
@@ -34,20 +36,14 @@ public class EmployeeService {
                 .orElseThrow(() -> new RuntimeException("Employee not found with id: " + id));
             employee.setDaysAvailable(days);
         return employeeRepository.save(employee).getId();
-
     }
 
     public List<Employee> findEmployeesForService(EmployeeRequestDTO request) {
         DayOfWeek date = request.getDate().getDayOfWeek();
-        System.out.println("Date retrieved: " + date);
         Set<EmployeeSkill> skills = request.getSkills();
-        System.out.println("Skills retrieved: " + skills);
 
         List<Employee> availableEmp = employeeRepository.findByDaysAvailable(date);
-        System.out.println("Available employees found: " + availableEmp.size());
         return availableEmp.stream().filter(employee -> employee.getSkills().containsAll(skills)).collect(Collectors.toList());
-
-
     }
 
 }
